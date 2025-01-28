@@ -16,7 +16,7 @@ export default defineConfig({
         host: 'localhost', 
         port: 5173,
         cors: {
-            origin: '*',
+            origin: 'http://192.168.1.54',
           },
     },
 });
