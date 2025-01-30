@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from '@inertiajs/react';
+import Layout from '../layouts/Layout';
 
 const images = [
     `${import.meta.env.VITE_BASE_URL}/storage/carrusel1.png`,
@@ -58,7 +59,7 @@ export default function Home() {
                 <p className="mt-6 text-justify max-w-96 text-xl">Estudiante de desarrollo web en Monlau familizarizado con una gran cantidad de lenguajes y frameworks.</p>
                 <p className="text-justify max-w-96 text-xl">Apasionado de la programación que busca crecer profesionalmente y aprender cada vez más de este mundo.</p>
                 <p>
-                    <Link to="/about">
+                    <Link href="/about">
                         <button className="mt-4 px-6 py-2 bg-red-500 text-white font-semibold rounded-full shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75">
                             ¡Descubre más sobre mí!
                         </button>
@@ -69,6 +70,8 @@ export default function Home() {
         </div>
     );
 }
+
+Home.layout = page => <Layout children={page} />;
 
 
 
